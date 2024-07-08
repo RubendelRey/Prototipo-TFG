@@ -1,0 +1,21 @@
+PREFIX fhir: <http://hl7.org/fhir/>
+PREFIX xs: <http://www.w3.org/2001/XMLSchema#>
+
+fhir:Procedure {
+    fhir:id xs:string,
+    fhir:code @<CodeableConcept>+,
+    fhir:bodySite @<CodeableConcept>*,
+    fhir:occurrenceDateTime xs:dateTime,
+    fhir:status ["in-progress" "completed"]
+}
+
+fhir:CodeableConcept {
+    fhir:coding <Coding>*,
+    fhir:text xs:string
+}
+
+fhir:Coding {
+    fhir:system xs:anyURI,
+    fhir:code xs:token,
+    fhir:display xs:string
+}

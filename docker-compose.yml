@@ -1,0 +1,62 @@
+version: "3.5"
+services:
+
+  #Clínica dental
+  clinicadental-webapp: 
+    build: ./clinicaDental/webapp
+    environment:
+      DOMAIN: clinicadental-restapi
+    ports:
+      - "5443:5443"
+    depends_on:
+      - clinicadental-restapi
+
+  clinicadental-restapi:
+    build: ./clinicadental/restapi
+    environment:
+      MONGO_CONNETION_STRING: mongodb://admin:password@clinicadental-mongo:27017/
+    ports:
+      - "5444:5444"
+    depends_on:
+      - clinicadental-mongo
+
+  clinicadental-mongo:
+    image: mongodb/mongodb-community-server:6.0-ubi8
+    environment:
+      - MONGODB_INITDB_ROOT_USERNAME=admin
+      - MONGODB_INITDB_ROOT_PASSWORD=password
+    ports:
+      - "5445:27017"
+
+  #Hospital
+  hospital-webapp:
+    build: ./hospital/webapp
+    environment:
+      DOMAIN: hospital-restapi
+    ports:
+      - "6443:6443"
+    depends_on:
+      - hospital-restapi
+
+  hospital-restapi:
+    build: ./hospital/restapi
+    environment:
+      MONGO_CONNETION_STRING: mongodb://admin:password@hospital-mongo:27017/
+    ports:
+      - "6444:6444"
+    depends_on:
+      - hospital-mongo
+
+  hospital-mongo:
+    image: mongodb/mongodb-community-server:6.0-ubi8
+    environment:
+      - MONGODB_INITDB_ROOT_USERNAME=admin
+      - MONGODB_INITDB_ROOT_PASSWORD=password
+    ports:
+      - "6445:27017"
+
+  #Navegador de Pods
+  podbrowser:
+    build: "./podbrowser"
+    ports:
+      - "4443:4443"

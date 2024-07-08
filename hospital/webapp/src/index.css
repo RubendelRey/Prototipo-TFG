@@ -1,0 +1,273 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+/* Header ------------------------------------------------------------------------------- */
+#logo_img {
+  max-height: 2em;
+  max-width: 100%;
+  height: auto;
+  width: auto;
+  padding: 0.25rem;
+}
+
+.menu {
+  z-index: 4;
+  background-color: #333;
+  color: var(--main-text-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  width: 100%;
+  font-size: 3.5vmin;
+  /*position: fixed;*/
+}
+
+.menu:not(footer) {
+  height: var(--nav-bar-size);
+}
+
+.menu ul {
+  list-style: none;
+  margin: 0;
+  vertical-align: middle;
+}
+
+.menu ul:not(.profile-dropdown ul) {
+  display: flex;
+  margin-right: 1em;
+  padding: 0;
+}
+
+.menu a {
+  text-decoration: none;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  color: white;
+  padding: 0 0.3em;
+}
+
+.menu ul li:not(.dropdown-links li).active {
+  background-color: var(--active-bg-color);
+}
+
+.menu ul li:not(.noHover li):hover {
+  background-color: #777;
+}
+
+.login-form {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  gap: 0.5em;
+  font-size: large;
+}
+
+.wrongLogIn {
+  color: red;
+}
+
+table {
+  border-collapse: collapse;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid black;
+  font-size: large;
+  width: 90%;
+  column-gap: 1em;
+}
+
+table.meetings {
+  width: 30%;
+}
+
+tr.app-before {
+  background-color: #ed6969;
+}
+
+tr:nth-child(odd).app-before {
+  background-color: lightcoral;
+}
+
+tr.app-after {
+  background-color: #d1ffbd;
+}
+
+tr:nth-child(odd).app-after {
+  background-color: lightgreen;
+}
+
+tr:nth-child(odd) {
+  background-color: lightgray;
+}
+
+.tables {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.profile-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1em;
+}
+
+.botonIniciarSesionPods,
+.botonExportarDatosPod {
+  padding: 0.5em;
+  font-size: 1.5em;
+}
+
+.solidFormLeft {
+  text-align: right;
+}
+
+.solidFormRight {
+  text-align: left;
+}
+
+.placeHolderIniciarSesionPods {
+  padding: 0.5em;
+  font-size: 0.8em;
+}
+
+.iniciarSesionPod {
+  padding: 0.5em;
+  font-size: 1.5em;
+}
+
+.profile {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1em;
+}
+
+.solidProfile {
+  display: flex;
+  flex-direction: column;
+}
+
+.solidPhoto {
+  width: 20%;
+}
+
+.solidForm {
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 1em;
+}
+
+.solidFormContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  margin: auto;
+}
+
+.solidFormContainerItems {
+  width: fit-content;
+  align-self: center;
+}
+
+.triplets {
+  margin-left: 1em;
+}
+
+.resource {
+  text-align: left;
+  display: flex;
+  gap: 0.5em;
+}
+
+iframe.files {
+  align-items: center;
+  width: 40em;
+  height: 40em;
+  border: 0;
+}
+
+.triplets1 {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5em;
+}
+
+.triplets2 {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5em;
+  width: 100%;
+}
+
+.subject {
+  align-self: flex-start;
+}
+
+.object {
+  width: 100%;
+  max-width: 100%;
+}
+
+pre {
+  text-align: left;
+}
+
+.dataButtonsContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1em;
+  align-content: center;
+}
+
+.dataButtons {
+  width: fit-content;
+}
+
+.requestData {
+  display: flex;
+  flex-direction: column;
+}
+
+.request {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1em;
+}
+
+.treatmentDataForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  align-items: center;
+}
+
+.treatmentDataFormItems {
+  width: fit-content;
+}
+
+body {
+  background-color: black;
+  color: white;
+}
+
+tr.customTable {
+  background-color: #333;
+}

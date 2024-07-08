@@ -1,0 +1,185 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+#logo_img {
+  max-height: 2em;
+  max-width: 100%;
+  height: auto;
+  width: auto;
+  padding: .25rem;
+}
+
+.menu {
+  z-index: 4;
+  color: var(--main-text-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  width: 100%;
+  font-size: 3.5vmin;
+  /*position: fixed;*/
+}
+
+html,
+body,
+#root {
+  background-color: rgb(15, 18, 20);
+  height: 100%;
+  color: white;
+}
+
+.App {
+  height: 91%;
+}
+
+footer {
+  color: white;
+  padding: 1em;
+  text-align: center;
+  height: 6%;
+  background-color: #121212;
+}
+
+.mainContainer {
+  display: grid;
+  grid-template-columns: 1fr 30fr 1fr;
+  width: 100%;
+  height: 100%;
+}
+
+.background {
+  height: 100%;
+}
+
+.menu:not(footer) {
+  height: var(--nav-bar-size);
+}
+
+.menu ul {
+  list-style: none;
+  margin: 0;
+  vertical-align: middle;
+}
+
+.menu ul:not(.profile-dropdown ul) {
+  display: flex;
+  margin-right: 1em;
+  padding: 0;
+}
+
+.menu a {
+  text-decoration: none;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  color: white;
+  padding: 0 0.3em;
+}
+
+.menu ul li:not(.dropdown-links li).active {
+  background-color: var(--active-bg-color);
+}
+
+.menu ul li:not(.noHover li):hover {
+  background-color: #777;
+}
+
+.profile {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 2em;
+}
+
+div.profileData {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5em;
+}
+
+.friendPhoto {
+  max-width: 20%;
+}
+
+.profilePhoto {
+  max-width: 50%;
+}
+
+.friend {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5em;
+}
+
+.triplets {
+  margin-left: 1em;
+}
+
+.resource {
+  text-align: left;
+  display: flex;
+  gap: 0.5em;
+}
+
+.resourceButton {
+  border: white;
+}
+
+.providers {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5em;
+}
+
+iframe.files {
+  align-items: center;
+  width: 40em;
+  height: 40em;
+  border: 0;
+}
+
+.triplets1 {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5em;
+}
+
+.triplets2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5em;
+}
+
+.object {
+  align-self:flex-start;
+}
+
+a {
+  color: lightblue;
+}
+
+.resourceBrowser {
+  width: 50%;
+}
